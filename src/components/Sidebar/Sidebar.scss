@@ -1,0 +1,213 @@
+@import "../../variables";
+
+@mixin bgDark {
+  background-color: $dark;
+  color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+// sidebar
+
+.sidebar {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  overflow: hidden;
+  transition: width 250ms ease;
+  @include bgDark();
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .logo {
+    white-space: nowrap;
+  }
+
+  .btn-title,
+  .ant-menu-title-content,
+  .ant-menu-submenu-arrow {
+    opacity: 1;
+    white-space: nowrap;
+    transition: opacity 300ms ease;
+  }
+}
+
+.sidebar.closed {
+  width: 72px;
+  .logo {
+    display: none;
+  }
+  .btn-title,
+  .ant-menu-title-content,
+  .ant-menu-submenu-arrow {
+    opacity: 0;
+  }
+}
+
+// top-bar (logo + menu)
+
+.top-bar {
+  margin-bottom: 32px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    color: $white;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+}
+
+// toggle menu
+
+.menu-toggle {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  .menu-toggle-bar {
+    width: 24px;
+    height: 2px;
+    background-color: $white;
+    border-radius: 2px;
+  }
+  .one {
+    width: 12px;
+  }
+  .three {
+    width: 18px;
+  }
+}
+
+// Link
+
+.ant-menu-item a {
+  color: inherit;
+}
+
+// ant-menu-bar
+
+.ant-menu {
+  @include bgDark();
+  width: 100% !important;
+  .ant-menu-submenu-arrow {
+    color: $white;
+  }
+}
+
+.ant-menu-inline {
+  border-right: none;
+}
+
+.ant-menu-sub.ant-menu-inline {
+  @include bgDark();
+}
+
+.ant-menu-inline {
+  .ant-menu-submenu-title,
+  .ant-menu-item {
+    padding-right: 24px;
+  }
+}
+
+.ant-menu-inline .ant-menu-item,
+.ant-menu-inline .ant-menu-submenu-title {
+  width: 100%;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: $dark-light;
+}
+
+.ant-menu-item:active,
+.ant-menu-submenu-title:active {
+  background: $dark-light;
+}
+
+.ant-menu-title-content {
+  font-weight: 500;
+}
+
+.btn-add-room {
+  height: 46px;
+  cursor: pointer;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  background-color: $blue;
+  transition: background-color 250ms ease;
+  span {
+    font-weight: 500;
+    margin-left: 10px;
+  }
+  &:hover {
+    background-color: $blue-light;
+  }
+}
+
+.sidebar.closed .btn-add-room {
+  i {
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-toggle {
+    position: fixed;
+    z-index: 1000;
+    top: 28px;
+    right: 16px;
+    .menu-toggle-bar {
+      background-color: $dark;
+      transition: transform 250ms ease, background-color 250ms ease;
+    }
+    .two {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+  .menu-toggle-light {
+    align-items: center;
+    .menu-toggle-bar {
+      background-color: $white;
+    }
+    .two {
+      transform: scaleX(0);
+    }
+    .one,
+    .three {
+      width: 24px;
+    }
+    .one {
+      transform: rotate(45deg) translateY(12px);
+    }
+    .three {
+      transform: rotate(-45deg) translateY(-11px);
+    }
+  }
+  .sidebar {
+    width: 100%;
+    .logo {
+      padding: 8px 0;
+    }
+  }
+  .sidebar.closed {
+    width: 0;
+  }
+}
