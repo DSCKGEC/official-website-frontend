@@ -1,0 +1,31 @@
+.layout-container {
+  display: flex;
+}
+
+.contents {
+  padding-left: 80px;
+}
+
+// .contents {
+//   padding-top: 80px;
+//   position: relative;
+//   left: 250px;
+//   transition: left 250ms ease;
+//   width: calc(100% - 250px);
+// }
+
+// .contents.moved {
+//   left: 72px;
+//   width: calc(100% - 72px);
+// }
+
+// @media only screen and (max-width: 600px) {
+//   .contents {
+//     width: 100%;
+//     left: 0;
+//   }
+//   .contents.moved {
+//     width: 100%;
+//     left: 0;
+//   }
+// }
