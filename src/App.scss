@@ -14,12 +14,25 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(201, 201, 201);
+  background: $grey;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $purple;
+  background: $blue;
   border-radius: 6px;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .wrapper {
+    max-width: 1248px;
+    margin-inline: auto;
+    padding: 24px 40px;
+  }
 }
 
 .btn {
