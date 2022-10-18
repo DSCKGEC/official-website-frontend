@@ -5,6 +5,7 @@ import About from "./containers/About/About";
 import Blogs from "./containers/Blogs/Blogs";
 import Projects from "./containers/Projects/Projects";
 import Events from "./containers/Events/Events";
+import UrlShortener from "./containers/UrlShortener/UrlShortener";
 
 const routeConfig: RouteObject[] = [
   {
@@ -28,8 +29,16 @@ const routeConfig: RouteObject[] = [
         path: "/events",
         element: <Events />,
       },
+      // {
+      //   path: "/not found",
+      //   element: <NotFound />,
+      // }
     ],
   },
+  {
+    path:"*",
+    element: <UrlShortener />,
+  }
 ];
 
 export default routeConfig;
