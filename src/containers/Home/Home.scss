@@ -1,90 +1,32 @@
 @import "../../variables";
 
-.home-container {
-  padding: 24px;
-  .home-elements {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-}
-
-.card-boxes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
-}
-
-.card {
-  padding: 24px;
-  color: $light-white;
-  background-color: red;
-  border-radius: 12px;
-  p {
-    margin-bottom: 0;
-    line-height: 1;
-  }
-  .card-title-bold {
-    font-weight: bold;
-    font-size: 24px;
-    margin-top: 24px;
-    i {
-      margin-right: 8px;
-    }
-  }
-  &:nth-child(1) {
-    background-color: #7f8fff;
-  }
-  &:nth-child(2) {
-    background-color: #ffa530;
-  }
-  &:nth-child(3) {
-    background-color: #1b9bff;
-  }
-  &:nth-child(4) {
-    background-color: #303fff;
-  }
-}
-
-.chart-boxes {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   justify-content: space-between;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 24px;
-}
-
-.chart-card {
-  padding: 24px;
-  background-color: $light-white;
-  border-radius: 12px;
+.hero-text-box {
+  padding-bottom: 2rem;
+  width: 375px;
+  height: 375px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  box-shadow: 1px 1px 12px -2px rgba(0, 0, 0, 0.25);
-}
-
-.chart-card-graph {
-  .chart {
-    width: 100%;
-    max-width: 500px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  .logo {
+    width: 100px;
   }
-}
-
-.chart-card-circle {
-  .chart {
-    width: 100%;
-    max-width: 380px;
+  h2,
+  h4 {
+    color: $black-60;
   }
-}
-
-@media only screen and (max-width: 1200px) {
-  .chart-boxes {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .chart-card {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: $grey;
+    border-radius: 32px;
+    transform: rotate(45deg);
+    z-index: -1;
   }
 }
