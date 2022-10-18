@@ -36,9 +36,9 @@ const routeConfig: RouteObject[] = [
     ],
   },
   {
-    path:"*",
+    path: "*",
     element: <UrlShortener />,
-  }
+  },
 ];
 
 export default routeConfig;
