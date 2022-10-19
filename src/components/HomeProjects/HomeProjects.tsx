@@ -16,8 +16,8 @@ const HomeProjects: React.FC = () => {
       const prjs = await allProjects();
       console.log(prjs);
 
-      setProjectObjs(prjs.projects.splice(0, 3));
       setNumProjects(prjs.projects.length);
+      setProjectObjs(prjs.projects.splice(0, 3));      
       setLoading(false);
     })();
   }, []);

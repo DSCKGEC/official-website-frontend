@@ -45,7 +45,7 @@ const HomeAbout: React.FC = () => {
               <span>Core Team Members</span>
             </div>
             <div className="work-card text-green">
-              <span>6</span>
+              <span>{countObjs.domains}</span>
               <span>Working Domains</span>
             </div>
             <div className="work-card text-yellow">

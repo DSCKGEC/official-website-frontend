@@ -43,7 +43,7 @@ const HomeEvents = () => {
           )))
           ):null }
           <div className="more-events">
-            <h2 className="title-20">We Conduct More Events</h2>
+            <h2 className="title-20">And many more...</h2>
             <div className="cta-single-button" style={{ marginTop: "2rem" }}>
               <button className="btn btn-outline btn-outline-blue">
                 See Other Events
