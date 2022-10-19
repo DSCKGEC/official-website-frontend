@@ -19,7 +19,7 @@ export const getCounts = async () => {
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 export const allProjects = async () => {
   try {
@@ -28,7 +28,7 @@ export const allProjects = async () => {
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 export const allEvents = async () => {
   try {
@@ -37,7 +37,7 @@ export const allEvents = async () => {
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 export const allBlogs = async () => {
   try {
@@ -46,4 +46,4 @@ export const allBlogs = async () => {
   } catch (error) {
     console.log(error);
   }
-}
+};

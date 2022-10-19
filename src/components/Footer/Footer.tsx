@@ -29,16 +29,25 @@ const Footer: React.FC = () => {
                     <a href="https://www.facebook.com/dsckgec" target="__blank">
                       <i className="fa-brands fa-facebook"></i>
                     </a>
-                    <a href="https://www.instagram.com/dsckgec/" target="__blank">
+                    <a
+                      href="https://www.instagram.com/dsckgec/"
+                      target="__blank"
+                    >
                       <i className="fa-brands fa-instagram"></i>
                     </a>
                     <a href="https://twitter.com/dsckgec" target="__blank">
                       <i className="fa-brands fa-twitter"></i>
                     </a>
-                    <a href="https://www.youtube.com/c/DeveloperStudentClubKGEC" target="__blank">
+                    <a
+                      href="https://www.youtube.com/c/DeveloperStudentClubKGEC"
+                      target="__blank"
+                    >
                       <i className="fa-brands fa-youtube"></i>
                     </a>
-                    <a href="https://www.linkedin.com/company/dsckgec/" target="__blank">
+                    <a
+                      href="https://www.linkedin.com/company/dsckgec/"
+                      target="__blank"
+                    >
                       <i className="fa-brands fa-linkedin"></i>
                     </a>
                   </div>
@@ -49,7 +58,14 @@ const Footer: React.FC = () => {
           <div className="col col-two">
             <div className="col-btn">
               <div className="cta-single-button">
-                <button onClick={()=>{window.location.href='https://discord.gg/VNfMU2yffd'}} className="btn btn-fill">Join Our Community</button>
+                <button
+                  onClick={() => {
+                    window.location.href = "https://discord.gg/VNfMU2yffd";
+                  }}
+                  className="btn btn-fill"
+                >
+                  Join Our Community
+                </button>
               </div>
             </div>
             <ul className="nav-links">
