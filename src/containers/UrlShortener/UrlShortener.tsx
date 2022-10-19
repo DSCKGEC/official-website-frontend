@@ -28,7 +28,7 @@ const UrlShortener: React.FC = () => {
     }
   }, []);
 
-  return <div className="id"></div>;
+  return <div className="id">Redirecting...</div>;
 };
 
 export default UrlShortener;
