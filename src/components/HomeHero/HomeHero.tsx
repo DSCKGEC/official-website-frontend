@@ -11,7 +11,7 @@ const HomeHero: React.FC = () => {
             <img src={DSCLogo} alt="" className="logo" />
           </div>
           <div className="text-content">
-            <h2>Google Developer Students Club</h2>
+            <h2>Google Developer Student Clubs</h2>
             <h4>Kalyani Government Engineering College</h4>
           </div>
           <div className="cta-single-button" style={{ marginTop: "2rem" }}>

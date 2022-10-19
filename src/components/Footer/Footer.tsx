@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
                 <img src={DSCLogo} alt="" />
               </div>
               <div className="col-text">
-                <h4 className="title-26">Google Developer Students Club</h4>
+                <h4 className="title-26">Google Developer Student Clubs</h4>
                 <h5 className="title-20">
                   Kalyani Government Engineering College
                 </h5>
