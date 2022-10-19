@@ -1,21 +1,21 @@
 import React from "react";
-import DSCLogo from "../../assets/dsc-logo.png";
+import HomeAbout from "../../components/HomeAbout/HomeAbout";
+import HomeEvents from "../../components/HomeEvents/HomeEvents";
+import HomeHero from "../../components/HomeHero/HomeHero";
+import HomeProjects from "../../components/HomeProjects/HomeProjects";
+import HomeRead from "../../components/HomeRead/HomeRead";
+import HomeWhat from "../../components/HomeWhat/HomeWhat";
 import "./Home.scss";
 
 const Home: React.FC = () => {
   return (
-    <div className="home-container container">
-      <div className="home-wrapper wrapper">
-        <div className="hero-text-box">
-          <div className="logo-img-div">
-            <img src={DSCLogo} alt="" className="logo" />
-          </div>
-          <div className="text-content">
-            <h2>Google Developer Students Club</h2>
-            <h4>Kalyani Government Engineering College</h4>
-          </div>
-        </div>
-      </div>
+    <div className="home-page page">
+      <HomeHero />
+      <HomeWhat />
+      <HomeAbout />
+      <HomeRead />
+      <HomeProjects />
+      <HomeEvents />
     </div>
   );
 };

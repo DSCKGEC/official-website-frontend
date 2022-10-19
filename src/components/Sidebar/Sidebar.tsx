@@ -34,7 +34,7 @@ const Sidebar: React.FC<IContentMovedProps> = ({
           </div>
           <div className="logo-text-content">
             <span>Google Developer Students Club</span>
-            <span>KGEC</span>
+            <span>Kalyani Government Engineering College</span>
           </div>
         </div>
         <ul className="nav-links">

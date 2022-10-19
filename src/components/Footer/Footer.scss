@@ -1,0 +1,113 @@
+@import "../../variables";
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid $black-50;
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 40px;
+
+    .col-container {
+      display: flex;
+      .col-img {
+        img {
+          width: 60px;
+          margin-right: 16px;
+        }
+      }
+      .col-text {
+        .title-26 {
+          margin-top: 8px;
+          font-weight: 500;
+          font-size: 28px;
+        }
+        .title-20 {
+          font-weight: 500;
+          margin-bottom: 1rem;
+        }
+        .title-20,
+        .title-26,
+        .text-18 {
+          color: $black-60;
+        }
+        .text-18 {
+          margin-bottom: 0;
+          line-height: 1.6;
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .follow {
+          margin-top: 48px;
+          h4 {
+            font-size: 16px;
+            margin-bottom: 1rem;
+            color: $dark;
+            font-weight: 500;
+          }
+          .icons {
+            padding-block: 60px 16px;
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            i {
+              color: $black-75;
+              font-size: 20px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .nav-links {
+      padding-top: 50px;
+      margin-inline: 0 auto;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  .col-two {
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+}
+.copyright {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  color: $black-60;
+  .p1 {
+    padding-top: 20px;
+  }
+  .p2 {
+    padding-top: 20px;
+  }
+}
+// @media (max-width: 1305px) {
+//   #footer {
+//     display: block;
+//     .col {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       margin-bottom: 20px;
+//       padding-top: 40px;
+//       .col-container {
+//         padding-left: 0;
+//       }
+//     }
+//     .line {
+//       margin-inline: auto;
+//     }
+//   }
+// }
