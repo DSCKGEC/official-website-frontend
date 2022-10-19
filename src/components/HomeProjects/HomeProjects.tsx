@@ -34,10 +34,10 @@ const HomeProjects: React.FC = () => {
             <span>Projects</span>
           </div>
           <p className="text-18">
-            See our Exclusive Projects... 
+            See our exclusive projects... 
           </p>
           <div className="cta-single-button" style={{ marginTop: "2rem" }}>
-            <button className="btn btn-fill">View Our Projects</button>
+            <button className="btn btn-fill">View more projects</button>
           </div>
         </div>
         <div className="text-content-box bg-green-box">
