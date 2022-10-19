@@ -7,12 +7,12 @@ const HomeWhat: React.FC = () => {
       <div className="home-what-wrapper wrapper wrapper-full-width">
         <div className="text-content-box bg-blue-box">
           <h2 className="title-36">
-            What Is <br />
-            Google Developer Students Club?
+            What is <br />
+            Google Developer Student Clubs?
           </h2>
           <p className="text-16">
             Google collaborates with university students who are passionate
-            about growing developer communities. GDSC is an Organisation for
+            about growing developer communities. GDSC is an organisation for
             university students who want to bring about a change through
             technology. We are focused upon building technical and non-technical
             skills, which would help students to build a better community.
