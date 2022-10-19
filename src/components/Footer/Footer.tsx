@@ -19,24 +19,36 @@ const Footer: React.FC = () => {
                   Kalyani Government Engineering College
                 </h5>
                 <p className="text-18">
-                  One of the most prestigious and sucessful club in our college
+                  One of the most prestigious and successful club in our college
                 </p>
                 <p className="text-18">Learning in Community</p>
                 <div className="follow">
                   <h4>dsckgec@gmail.com</h4>
                   <h4>Kalyani, Nadia, West Bengal, Pin - 741235</h4>
                   <div className="icons">
-                    <a href="#">
+                    <a href="https://www.facebook.com/dsckgec" target="__blank">
                       <i className="fa-brands fa-facebook"></i>
                     </a>
-                    <a href="#">
+                    <a
+                      href="https://www.instagram.com/dsckgec/"
+                      target="__blank"
+                    >
                       <i className="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="#">
+                    <a href="https://twitter.com/dsckgec" target="__blank">
                       <i className="fa-brands fa-twitter"></i>
                     </a>
-                    <a href="#">
+                    <a
+                      href="https://www.youtube.com/c/DeveloperStudentClubKGEC"
+                      target="__blank"
+                    >
                       <i className="fa-brands fa-youtube"></i>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/company/dsckgec/"
+                      target="__blank"
+                    >
+                      <i className="fa-brands fa-linkedin"></i>
                     </a>
                   </div>
                 </div>
@@ -46,7 +58,14 @@ const Footer: React.FC = () => {
           <div className="col col-two">
             <div className="col-btn">
               <div className="cta-single-button">
-                <button className="btn btn-fill">Join Our Community</button>
+                <button
+                  onClick={() => {
+                    window.location.href = "https://discord.gg/VNfMU2yffd";
+                  }}
+                  className="btn btn-fill"
+                >
+                  Join Our Community
+                </button>
               </div>
             </div>
             <ul className="nav-links">
@@ -69,8 +88,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="copyright">
-          <p className="p1">Designed and Developed by GDSC KGEC</p>
-          <p className="p2">@copyright 2022</p>
+          <p className="p1">Designed and Developed by GDSC-KGEC</p>
+          <p className="p2">Copyright © 2022 GDSC-KGEC</p>
         </div>
       </div>
     </div>
