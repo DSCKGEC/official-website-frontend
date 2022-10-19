@@ -10,10 +10,12 @@
 }
 
 body {
-  font-family: "Nunito", sans-serif;
+  //font-family: "Nunito", sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   background-color: $white;
   font-size: 16px;
   background-color: $light-grey;
+  color: $black-75;
 }
 
 button {
@@ -23,4 +25,13 @@ button {
 
 input {
   outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
 }

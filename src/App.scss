@@ -24,18 +24,93 @@
 
 .container {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 4rem;
   .wrapper {
+    width: 100%;
     max-width: 1248px;
     margin-inline: auto;
     padding: 24px 40px;
+  }
+  .wrapper-full-width {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
 .btn {
   padding: 10px 20px;
   border-radius: 4px;
+  min-width: 200px;
+  border: 2px solid $blue;
+  font-size: 14px;
+}
+
+.btn-fill {
+  background-color: $blue;
+  color: $white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: $blue;
+}
+
+.btn-outline-white {
+  border-color: $white;
+  color: $white;
+}
+
+.btn-outline-green {
+  border-color: $green;
+  color: $green;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.title-26 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.title-36 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.title-20 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.text-16 {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.text-18 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.text-blue {
+  color: $blue;
+}
+
+.text-green {
+  color: $green;
+}
+
+.text-yellow {
+  color: $yellow;
+}
+
+.text-red {
+  color: $red;
 }

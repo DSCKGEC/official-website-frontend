@@ -1,5 +1,6 @@
 import React, { createContext, useState } from "react";
 import { Outlet } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import "./Layout.scss";
 
@@ -17,6 +18,7 @@ const Layout: React.FC = () => {
           />
           <div className={!contentMoved ? "contents moved" : "contents"}>
             <Outlet />
+            <Footer />
           </div>
         </ContentMovedContext.Provider>
       </div>
