@@ -1,5 +1,7 @@
 import axios from "axios";
 const baseURL = process.env.REACT_APP_BACKEND_URL;
+// console.log(process.env.REACT_APP_BACKEND_URL);
+// const baseURL = "https://gdsc-backend-dihk.onrender.com/api/";
 
 export const fetchShortUrl = async (url: string) => {
   try {

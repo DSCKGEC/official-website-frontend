@@ -29,7 +29,7 @@ ul {
   height: 100%;
   width: 250px;
   overflow: hidden;
-  transition: width 250ms ease;
+  transition: width 300ms ease;
   @include bgDark();
 
   display: flex;
@@ -110,8 +110,9 @@ ul {
     gap: 8px;
     transform: rotate(-90deg);
     width: 72px;
+    font-family: "JetBrains Mono", monospace;
     .logo {
-      width: 25px;
+      width: 20px;
     }
     span {
       white-space: nowrap;
@@ -120,11 +121,11 @@ ul {
       display: flex;
       flex-direction: column;
       & > span:first-child {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
       }
       & > span:last-child {
-        font-size: 14px;
+        font-size: 12px;
         color: $black-60;
         font-weight: 500;
       }
@@ -139,9 +140,13 @@ ul {
   gap: 1.5rem;
   max-width: max-content;
   margin-inline: auto;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+  transition-delay: 300ms;
   li {
+    font-family: "JetBrains Mono", monospace;
     a {
-      color: $dark;
+      color: inherit;
       font-size: 20px;
       transition: color 200ms ease;
     }
@@ -151,32 +156,47 @@ ul {
   }
 }
 
-@media only screen and (max-width: 600px) {
+.nav-links.hidden {
+  opacity: 0;
+  transition-duration: 0ms;
+  transition-delay: 0ms;
+}
+
+.nav-links.hidden {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 768px) {
   .menu-toggle {
     position: fixed;
     z-index: 1000;
     top: 28px;
     right: 16px;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    background-color: $light-grey;
+    border-radius: 50%;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     .menu-toggle-bar {
       background-color: $dark;
       transition: transform 250ms ease, background-color 250ms ease;
+      width: 24px;
     }
     .two {
       transform: scaleX(1);
-      transform-origin: left;
+      transform-origin: right;
     }
   }
   .menu-toggle-light {
-    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
     .menu-toggle-bar {
       background-color: $dark;
     }
     .two {
       transform: scaleX(0);
-    }
-    .one,
-    .three {
-      width: 24px;
     }
     .one {
       transform: rotate(45deg) translateY(12px);

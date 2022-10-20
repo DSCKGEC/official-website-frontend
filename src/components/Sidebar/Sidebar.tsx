@@ -37,11 +37,11 @@ const Sidebar: React.FC<IContentMovedProps> = ({
             <span>Kalyani Government Engineering College</span>
           </div>
         </div>
-        <ul className="nav-links">
+        <ul className={!sidebarOpen ? "nav-links" : "nav-links hidden"}>
           <li>
             <Link
               to="/"
-              style={{ color: location.pathname === "/" ? "$blue" : "$dark" }}
+              style={{ color: location.pathname === "/" ? "#007bff" : "#000" }}
               onClick={() => setSidebarOpen(true)}
             >
               Home
@@ -51,7 +51,7 @@ const Sidebar: React.FC<IContentMovedProps> = ({
             <Link
               to="/about"
               style={{
-                color: location.pathname === "/about" ? "$blue" : "$dark",
+                color: location.pathname === "/about" ? "#007bff" : "#000",
               }}
               onClick={() => setSidebarOpen(true)}
             >
@@ -62,7 +62,7 @@ const Sidebar: React.FC<IContentMovedProps> = ({
             <Link
               to="/blogs"
               style={{
-                color: location.pathname === "/blogs" ? "$blue" : "$dark",
+                color: location.pathname === "/blogs" ? "#007bff" : "#000",
               }}
               onClick={() => setSidebarOpen(true)}
             >
@@ -73,7 +73,7 @@ const Sidebar: React.FC<IContentMovedProps> = ({
             <Link
               to="/projects"
               style={{
-                color: location.pathname === "/projects" ? "$blue" : "$dark",
+                color: location.pathname === "/projects" ? "#007bff" : "#000",
               }}
               onClick={() => setSidebarOpen(true)}
             >
@@ -84,7 +84,7 @@ const Sidebar: React.FC<IContentMovedProps> = ({
             <Link
               to="/events"
               style={{
-                color: location.pathname === "/events" ? "$blue" : "$dark",
+                color: location.pathname === "/events" ? "#007bff" : "#000",
               }}
               onClick={() => setSidebarOpen(true)}
             >
