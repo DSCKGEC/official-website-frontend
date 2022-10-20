@@ -4,9 +4,9 @@ import ComingSoon from "../../components/Coming Soon/ComingSoon";
 
 const Events: React.FC = () => {
   return (
-  <div className="events-page page">
-    <ComingSoon />
-  </div>
+    <div className="events-page page">
+      <ComingSoon />
+    </div>
   );
 };
 

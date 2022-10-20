@@ -15,47 +15,36 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     (async () => {
-      setLoading(true);      
-      
-      const countObjs = await getCounts();            
+      setLoading(true);
+
+      const countObjs = await getCounts();
       const eventObjs = await allEvents();
       const projectObjs = await allProjects();
 
+      setProps({
+        counts: countObjs.counts,
+        events: eventObjs.events,
+        projects: projectObjs.projects,
+      });
 
-      setProps(
-        {
-          counts: countObjs.counts,
-          events: eventObjs.events,
-          projects: projectObjs.projects,
-        }
-      );
-
-      setTimeout(() => {  
-        setLoading(false); }
-      , 2000);
-      
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
     })();
   }, []);
 
-
-  return (
-    (loading) ? 
+  return loading ? (
     <div className="loading">
-      <Loader/>
-    </div> :
+      <Loader />
+    </div>
+  ) : (
     <div className="home-page page">
       <HomeHero />
       <HomeWhat />
-      <HomeAbout 
-        {...props}
-      />
+      <HomeAbout {...props} />
       <HomeRead />
-      <HomeProjects 
-        {...props}
-      />
-      <HomeEvents
-        {...props}
-      />
+      <HomeProjects {...props} />
+      <HomeEvents {...props} />
     </div>
   );
 };

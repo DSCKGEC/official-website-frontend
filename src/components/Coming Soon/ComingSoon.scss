@@ -1,44 +1,45 @@
 @import "../../variables";
 
-.coming-soon{
-    height: 100vh;
+.coming-soon {
+  height: 100vh;
 }
 #container {
-    top: 50%;
-    left: 50%;
-    height: 100%;
-    margin-top: -200px; /*-1/2 of height*/
-    margin-left: -125px; /*-1/2 of width*/
-    position: absolute;
-    text-align: center;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  margin-top: -200px; /*-1/2 of height*/
+  margin-left: -125px; /*-1/2 of width*/
+  position: absolute;
+  text-align: center;
 }
 
-#avatar {    
-    border: white solid 7px;
-    background-color: white;
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 50%;
-    animation: bounce cubic-bezier(0.19, 1, 0.22, 1) 1.5s alternate infinite;
-    -webkit-animation: bounce cubic-bezier(0.19, 1, 0.22, 1) 1.5s alternate infinite;
+#avatar {
+  border: white solid 7px;
+  background-color: white;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  animation: bounce cubic-bezier(0.19, 1, 0.22, 1) 1.5s alternate infinite;
+  -webkit-animation: bounce cubic-bezier(0.19, 1, 0.22, 1) 1.5s alternate
+    infinite;
 }
 
 @keyframes bounce {
-    to {
-        transform: translateY(-12px) scale(1.03);
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-    }
-    }
-    @-webkit-keyframes bounce {
-    to {
-        -webkit-transform: translateY(-12px) scale(1.03);
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-    }
+  to {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+@-webkit-keyframes bounce {
+  to {
+    -webkit-transform: translateY(-12px) scale(1.03);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  }
 }
 
 #text {
-    margin-top: 7px;
+  margin-top: 7px;
 }
-  
+
 //   h1,
 //   p {
 //     margin: 0;
@@ -46,14 +47,13 @@
 //     font-style: normal;
 //     color: rgba(0, 0, 0, 1);
 //   }
-  
+
 //   h1 {
 //     color: rgba(1, 106, 154, 0.75); /*#016A9A;*/
 //     text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
 //   }
-  
+
 //   p {
 //     color: rgba(0, 0, 0, 0.25);
 //     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
 //   }
-  

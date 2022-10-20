@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./HomeAbout.scss";
 
-const HomeAbout: React.FC = (props:any) => {
-  const [countObjs, setCountObjs]: any = useState(props.counts);
+const HomeAbout: React.FC = (props: any) => {
+  const [countObjs, setCountObjs]: any = useState({});
   let isAnimationDone = false;
 
   function animateValue(id: any, newValue: any, duration: any) {
@@ -48,13 +48,19 @@ const HomeAbout: React.FC = (props:any) => {
     }
   }
 
+  useEffect(() => {
+    if (props.counts) {
+      setCountObjs(props.counts);
+    }
+  }, [countObjs]);
+
   return (
     <>
-      { countObjs ? (
+      {countObjs ? (
         <div className="home-about-container container">
           <div
             className="home-about-wrapper wrapper wrapper-full-width"
-            onMouseEnter={() => animateAll(countObjs, 2000)}
+            onMouseEnter={() => animateAll({ ...countObjs, users: 50 }, 2000)}
           >
             <div className="text-content-box bg-blue-box">
               <h2 className="title-36">About GDSC KGEC</h2>

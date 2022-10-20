@@ -6,7 +6,7 @@ const Projects: React.FC = () => {
   return (
     <div className="projects-container container">
       <div className="projects-wrapper wrapper">
-        <ComingSoon/>        
+        <ComingSoon />
       </div>
     </div>
   );

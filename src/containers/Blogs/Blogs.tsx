@@ -3,9 +3,11 @@ import "./Blogs.scss";
 import ComingSoon from "../../components/Coming Soon/ComingSoon";
 
 const Blogs: React.FC = () => {
-  return <div className="blogs-page page">
+  return (
+    <div className="blogs-page page">
       <ComingSoon />
-  </div>;
+    </div>
+  );
 };
 
 export default Blogs;
