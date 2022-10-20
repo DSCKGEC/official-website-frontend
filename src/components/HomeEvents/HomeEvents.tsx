@@ -1,30 +1,26 @@
 import React, { useState, useEffect } from "react";
-import { allEvents } from "../../api/api";
 import "./HomeEvents.scss";
 
-const HomeEvents = () => {
+const HomeEvents = (props:any) => {
   const [eventObjs, setEventObjs]: any = useState([]);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    (async () => {
-      setLoading(true);
-      const events = await allEvents();
-      console.log(events);
-
-      setEventObjs(events.events.splice(0, 1));
-      setLoading(false);
-    })();
-  }, []);
+    if(props.events) {
+      setEventObjs(props.events.slice(0, 2));
+    }
+  }, [props.events]);
 
   return (
     <div className="home-events-container container">
       <div className="home-events-wrapper wrapper">
         <h2 className="title-36">Our Events</h2>
-        {!loading && eventObjs
+        {eventObjs
           ? eventObjs.map((event: any) => (
+            <>
               <div className="event-card">
-                <p className="text-18">Ongoing Event</p>
+                <p className="text-18">
+                  { (new Date(event.date) > new Date()) ? "Upcoming" : "Past" } Event
+                </p>
                 <div className="card-content-box">
                   <div className="card-call-to-action">
                     <h3 className="title-20">{event.title}</h3>
@@ -43,6 +39,8 @@ const HomeEvents = () => {
                   <p className="text-16">{event.longDescription}</p>
                 </div>
               </div>
+              <br/><br/>
+              </>
             ))
           : null}
         <div className="more-events">

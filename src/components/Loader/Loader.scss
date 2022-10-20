@@ -1,0 +1,77 @@
+@import "../../variables";
+
+.loader{
+    height: 100vh;
+}
+#dscLogo {
+    position: absolute;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #dscLogo path:nth-child(1) {
+    stroke-dasharray: 1370.339111328125;
+    stroke-dashoffset: 1370.339111328125;
+    animation: line-anim 2s ease-out forwards, fillYellow 1.5s ease-out forwards 2s,fadeout 1s ease-out forwards;
+  }
+  #dscLogo path:nth-child(2) {
+    stroke-dasharray: 1370.339111328125;
+    stroke-dashoffset: 1370.339111328125;
+    animation: line-anim 2s ease forwards , fillGreen 1.5s ease forwards 2s;
+  }
+  #dscLogo path:nth-child(3) {
+    stroke-dasharray: 1370.339111328125;
+    stroke-dashoffset: 1370.339111328125;
+    animation: line-anim 2s ease forwards , fillRed 1.5s ease forwards 2s;
+  }
+  #dscLogo path:nth-child(4) {
+    stroke-dasharray: 1370.339111328125;
+    stroke-dashoffset: 1370.339111328125;
+    animation: line-anim 2s ease forwards , fillBlue 1.5s ease forwards 2s;
+  }
+  @keyframes line-anim {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes fillYellow {
+    from {
+      fill: transparent;
+    }
+    to {
+      fill: #f4b400;
+    }
+  }
+  
+  @keyframes fillRed {
+    from {
+      fill: transparent;
+    }
+    to {
+      fill: #db4437;
+    }
+  }
+  @keyframes fillBlue {
+    from {
+      fill: transparent;
+    }
+    to {
+      fill: #4285f4;
+    }
+  }
+  @keyframes fillGreen {
+    from {
+      fill: transparent;
+    }
+    to {
+      fill: #0f9d58;
+    }
+  }
+@keyframes fade-out{
+  from{
+    opacity:1
+  }
+  to{
+    opacity:0
+  }
+}

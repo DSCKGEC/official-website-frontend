@@ -1,22 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { getCounts } from "../../api/api";
 import "./HomeAbout.scss";
 
-const HomeAbout: React.FC = () => {
-  const [countObjs, setCountObjs]: any = useState({});
-  const [loading, setLoading] = useState(false);
+const HomeAbout: React.FC = (props:any) => {
+  const [countObjs, setCountObjs]: any = useState(props.counts);
   let isAnimationDone = false;
-
-  useEffect(() => {
-    (async () => {
-      setLoading(true);
-      const countObjs = await getCounts();
-      console.log(countObjs);
-
-      setCountObjs(countObjs.counts);
-      setLoading(false);
-    })();
-  }, []);
 
   function animateValue(id: any, newValue: any, duration: any) {
     let obj: any = document.getElementById(id);
@@ -63,7 +50,7 @@ const HomeAbout: React.FC = () => {
 
   return (
     <>
-      {!loading && countObjs ? (
+      { countObjs ? (
         <div className="home-about-container container">
           <div
             className="home-about-wrapper wrapper wrapper-full-width"

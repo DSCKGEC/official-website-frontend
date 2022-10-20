@@ -1,25 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { allProjects } from "../../api/api";
 import "./HomeProjects.scss";
 
-const HomeProjects: React.FC = () => {
+const HomeProjects: React.FC = (props:any) => {
   const [numProjects, setNumProjects]: any = useState(0);
   const [projectObjs, setProjectObjs]: any = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  const navigate = useNavigate();
+  
 
   useEffect(() => {
-    (async () => {
-      setLoading(true);
-      const prjs = await allProjects();
-      console.log(prjs);
-
-      setNumProjects(prjs.projects.length);
-      setProjectObjs(prjs.projects.splice(0, 3));
-      setLoading(false);
-    })();
+    if(props.projects) {
+      setNumProjects(props.projects.length);
+      setProjectObjs(props.projects.splice(0, 3));
+    }
   }, []);
 
   return (
@@ -29,7 +20,7 @@ const HomeProjects: React.FC = () => {
           <h2 className="title-36">GDSC KGEC Projects</h2>
           <div className="count">
             <span className="large-no">
-              {!loading && numProjects ? numProjects : 0}
+              {numProjects ? numProjects : 0}
             </span>
             <span>Projects</span>
           </div>
@@ -40,7 +31,7 @@ const HomeProjects: React.FC = () => {
         </div>
         <div className="text-content-box bg-green-box">
           <h2 className="title-36">Top 3 Projects</h2>
-          {!loading && projectObjs ? (
+          {projectObjs ? (
             <div className="home-projects-box">
               {projectObjs.map((project: any) => (
                 <div className="home-project-card">
