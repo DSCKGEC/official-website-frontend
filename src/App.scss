@@ -46,6 +46,7 @@
   min-width: 200px;
   border: 2px solid $blue;
   font-size: 14px;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .btn-fill {
@@ -76,27 +77,31 @@
 .title-26 {
   font-size: 26px;
   font-weight: 600;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .title-36 {
   font-size: 36px;
   font-weight: 500;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .title-20 {
   font-size: 20px;
   font-weight: 600;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .text-16 {
   font-size: 16px;
   line-height: 1.6;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .text-18 {
   font-size: 18px;
   font-weight: 500;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .text-blue {
@@ -113,4 +118,10 @@
 
 .text-red {
   color: $red;
+}
+
+@media only screen and (max-width: 548px) {
+  .container .wrapper {
+    padding: 24px;
+  }
 }

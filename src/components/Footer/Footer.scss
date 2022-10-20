@@ -39,7 +39,7 @@
           margin-bottom: 0;
           line-height: 1.6;
           font-size: 16px;
-          font-weight: 500;
+          font-weight: 400;
         }
         .follow {
           margin-top: 48px;
@@ -73,6 +73,7 @@
       margin-inline: 0 auto;
       a {
         text-decoration: none;
+        font-family: "JetBrains Mono", monospace;
       }
     }
   }
@@ -111,3 +112,43 @@
 //     }
 //   }
 // }
+
+@media only screen and (max-width: 768px) {
+  .footer-content {
+    .col-one {
+      .col-container {
+        flex-direction: column;
+        .col-text {
+          .title-26 {
+            font-size: 24px;
+          }
+          .title-20 {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 548px) {
+  .footer-content {
+    .col-one {
+      .col-container {
+        .col-text {
+          .title-26 {
+            font-size: 20px;
+            margin-bottom: 4px;
+          }
+          .title-20 {
+            font-size: 16px;
+          }
+          .text-18 {
+            font-size: 14px;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+}
