@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import Sidebar from "../../components/Sidebar/Sidebar";
@@ -8,6 +8,9 @@ export const ContentMovedContext = createContext<any>([] as any);
 
 const Layout: React.FC = () => {
   const [contentMoved, setContentMoved] = useState<boolean>(false);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
       <div className="layout-container">
