@@ -60,7 +60,7 @@ const HomeAbout: React.FC = (props: any) => {
         <div className="home-about-container container">
           <div
             className="home-about-wrapper wrapper wrapper-full-width"
-            onMouseEnter={() => animateAll({ ...countObjs, users: 50 }, 2000)}
+            onMouseEnter={() => animateAll({ ...countObjs }, 2000)}
           >
             <div className="text-content-box bg-blue-box">
               <h2 className="title-36">About GDSC KGEC</h2>
