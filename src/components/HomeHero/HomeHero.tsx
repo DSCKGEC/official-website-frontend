@@ -29,7 +29,12 @@ const HomeHero: React.FC = () => {
             <h4>Kalyani Government Engineering College</h4>
           </div>
           <div className="cta-single-button" style={{ marginTop: "2rem" }}>
-            <button className="btn btn-fill">About Us</button>
+            <button
+              onClick={() => window.scroll({ top: 1500, behavior: "smooth" })}
+              className="btn btn-fill"
+            >
+              About Us
+            </button>
           </div>
         </div>
       </div>
