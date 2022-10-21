@@ -8,6 +8,7 @@ import HomeWhat from "../../components/HomeWhat/HomeWhat";
 import "./Home.scss";
 import { getCounts, allEvents, allProjects } from "../../api/api";
 import Loader from "../../components/Loader/Loader";
+import FadeIn from "react-fade-in";
 
 const Home: React.FC = () => {
   const [props, setProps]: any = useState({});
@@ -31,20 +32,21 @@ const Home: React.FC = () => {
         setLoading(false);
       }, 2000);
     })();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   return loading ? (
-    <div className="loading">
-      <Loader />
-    </div>
+    <Loader />
   ) : (
     <div className="home-page page">
-      <HomeHero />
-      <HomeWhat />
-      <HomeAbout {...props} />
-      <HomeRead />
-      <HomeProjects {...props} />
-      <HomeEvents {...props} />
+      <FadeIn transitionDuration={800}>
+        <HomeHero />
+        <HomeWhat />
+        <HomeAbout {...props} />
+        <HomeRead />
+        <HomeProjects {...props} />
+        <HomeEvents {...props} />
+      </FadeIn>
     </div>
   );
 };
