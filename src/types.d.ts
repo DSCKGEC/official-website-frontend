@@ -17,3 +17,8 @@ interface UserLoginDataType {
   email: string;
   password: string;
 }
+
+interface ChatMessage {
+  sender: string;
+  message: string;
+}

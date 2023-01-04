@@ -27,21 +27,32 @@ const HomeProjects: React.FC = (props: any) => {
           </div>
         </div>
         <div className="text-content-box bg-green-box">
-          <h2 className="title-36">Top 3 Projects</h2>
+          <h2 className="title-36">Featured Projects</h2>
           {projectObjs ? (
             <div className="home-projects-box">
               {projectObjs.map((project: any) => (
                 <div className="home-project-card">
                   <h3 className="text-18">{project.name}</h3>
-                  <span></span>
-                  <button
-                    onClick={() => {
-                      window.location.href = project.repoLink;
+                  <div style={{ overflowY: "scroll" }}>
+                    <p>{project.about}</p>
+                  </div>
+                  <div
+                    style={{
+                      flexGrow: 1,
+                      display: "flex",
+                      alignItems: "end",
+                      marginTop: "1.5rem",
                     }}
-                    className="btn btn-outline btn-outline-green"
                   >
-                    View
-                  </button>
+                    <button
+                      onClick={() => {
+                        window.location.href = project.repoLink;
+                      }}
+                      className="btn btn-outline btn-outline-green"
+                    >
+                      View
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>

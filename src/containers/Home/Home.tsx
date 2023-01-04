@@ -22,6 +22,8 @@ const Home: React.FC = () => {
       const eventObjs = await allEvents();
       const projectObjs = await allProjects();
 
+      console.log(projectObjs);
+
       setProps({
         counts: countObjs.counts,
         events: eventObjs.events,
