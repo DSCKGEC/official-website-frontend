@@ -1,5 +1,5 @@
 import React from "react";
-import GDSCImg from "../../assets/gdsc-meta-image.png";
+import GDSCImg from "../../../assets/gdsc-meta-image.png";
 
 const HomeWhat: React.FC = () => {
   return (
