@@ -30,11 +30,11 @@ const HomeProjects: React.FC = (props: any) => {
           <h2 className="title-36">Featured Projects</h2>
           {projectObjs ? (
             <div className="home-projects-box">
-              {projectObjs.map((project: any) => (
-                <div className="home-project-card">
+              {projectObjs.map((project: any, index: number) => (
+                <div key={index} className="home-project-card">
                   <h3 className="text-18">{project.name}</h3>
                   <div style={{ overflowY: "scroll" }}>
-                    <p>{project.about}</p>
+                    <p style={{ fontSize: "14px" }}>{project.about}</p>
                   </div>
                   <div
                     style={{

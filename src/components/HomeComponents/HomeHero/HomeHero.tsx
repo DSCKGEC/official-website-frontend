@@ -1,6 +1,6 @@
 import React from "react";
-import DSCLogo from "../../assets/dsc-logo.png";
-import BgCardHero from "../../assets/bg-card.png";
+import DSCLogo from "../../../assets/dsc-logo.png";
+// import BgCardHero from "../../assets/bg-card.png";
 // import RedRectangle from "../../assets/rectangle-87.png";
 // import RedCircle from "../../assets/red-circle.png";
 // import RedTriangle from "../../assets/red-triangle.png";
