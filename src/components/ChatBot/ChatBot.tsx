@@ -142,7 +142,25 @@ const ChatBot: React.FC = () => {
               const fetchedMessages = JSON.parse(
                 sessionStorage.getItem("user_chat")!
               );
-              setMessages(fetchedMessages);
+              if (fetchedMessages) {
+                setMessages(fetchedMessages);
+              } else {
+                sessionStorage.setItem(
+                  "user_chat",
+                  JSON.stringify([
+                    {
+                      sender: "bot",
+                      message: "Hi there! 👋, how can I help you?",
+                    },
+                  ])
+                );
+                setMessages([
+                  {
+                    sender: "bot",
+                    message: "Hi there! 👋, how can I help you?",
+                  },
+                ]);
+              }
             }
             setIsVisible(!isVisible);
           }}
