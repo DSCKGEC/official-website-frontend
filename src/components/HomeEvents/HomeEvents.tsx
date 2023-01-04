@@ -24,7 +24,14 @@ const HomeEvents = (props: any) => {
                   </p>
                   <div className="card-content-box">
                     <div className="card-call-to-action">
-                      <h3 className="title-20">{event.title}</h3>
+                      <div className="event-main-details">
+                        <img
+                          src={event.imageUrl}
+                          alt=""
+                          className="event-image"
+                        />
+                        <h3 className="title-20">{event.title}</h3>
+                      </div>
                       <div
                         className="cta-buttons"
                         style={{ marginTop: "2rem" }}

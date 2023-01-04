@@ -20,6 +20,14 @@
 //   width: calc(100% - 72px);
 // }
 
+.chatbot {
+  position: fixed;
+  z-index: 1000;
+  bottom: 28px;
+  right: 0;
+  padding: 16px;
+}
+
 @media only screen and (max-width: 768px) {
   .contents {
     width: 100%;

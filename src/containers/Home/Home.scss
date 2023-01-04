@@ -214,13 +214,16 @@
       background-color: $white;
       border-radius: 6px;
       color: $black-75;
+      max-height: 250px;
+      overflow-y: hidden;
       h3 {
         font-size: 18px;
         font-weight: 600;
         line-height: 1.5;
         color: $black-75;
         font-family: "JetBrains Mono", monospace;
-        min-height: 75px;
+        min-height: 50px;
+        overflow-wrap: break-word;
       }
       .btn-outline-green {
         min-width: 100%;
@@ -241,7 +244,7 @@
     box-shadow: $gen-box-shadow;
     border-radius: 8px;
     .text-18 {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       color: $black-50;
     }
     .card-content-box {
@@ -252,6 +255,10 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      .event-image {
+        width: 200px;
+        margin-bottom: 0.5rem;
+      }
       .title-20 {
         white-space: nowrap;
       }
