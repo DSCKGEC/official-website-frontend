@@ -4,6 +4,7 @@ import FadeIn from "react-fade-in";
 import "./ChatBot.scss";
 import axios from "axios";
 
+
 const ChatBot: React.FC = () => {
   const scrollRef: MutableRefObject<HTMLParagraphElement | null> = useRef(null);
   //   const userChat = JSON.parse(sessionStorage.getItem("user_chat"));
@@ -12,6 +13,7 @@ const ChatBot: React.FC = () => {
     { sender: "bot", message: "Hi there! 👋, how can I help you?" },
   ]);
   const [inputMessage, setInputMessage] = useState<string>("");
+  const chatURL = process.env.REACT_APP_CHAT_URL;
 
   const handleSendMessage = () => {
     const userMessage = inputMessage;
@@ -19,13 +21,15 @@ const ChatBot: React.FC = () => {
     const config = {
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
       },
     };
     if (userMessage) {
       setInputMessage("");
       axios
         .post(
-          "http://13.235.224.44/reply",
+          (chatURL)?chatURL:"",
+          // "http://127.0.0.1:5000/reply",
           JSON.stringify({ text: userMessage }),
           config
         )
